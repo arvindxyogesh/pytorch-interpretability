@@ -1,0 +1,19 @@
+model:
+  architecture: simple_cnn
+  n_classes: 10
+
+interpretability:
+  methods:
+    - gradcam
+    - integrated_gradients
+    - saliency
+    - smoothgrad
+  integrated_gradients:
+    steps: 50
+  smoothgrad:
+    n_samples: 25
+    noise_level: 0.1
+  output_dir: ./outputs
+
+logging:
+  level: INFO
